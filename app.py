@@ -4,11 +4,11 @@ from agents import handle_query
 import re
 
 st.set_page_config(
-    page_title="AI Personal Assistant",
+    page_title="Novi-AI Personal Assistant",
     page_icon="🤖"
 )
 
-st.title("🤖 AI Personal Assistant")
+st.title("🤖 Novi-Your AI Personal Assistant")
 st.write("Ask questions, perform calculations, or get researched information.")
 
 # Initialize chat history
