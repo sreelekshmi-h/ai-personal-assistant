@@ -5,9 +5,11 @@
 An agentic AI assistant that routes user queries to the appropriate specialist and uses tools to complete tasks.
 
 ## UI Screenshots
-<img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/6af85f4b-71dc-482c-8d9a-e3cb54de33e0" />
+<img width="706" height="447" alt="image" src="https://github.com/user-attachments/assets/6af85f4b-71dc-482c-8d9a-e3cb54de33e0" />
+
 <img width="706" height="447" alt="image" src="https://github.com/user-attachments/assets/6b9033ee-4353-4fa0-924d-cb7541ab3243" />
-<img width="629" height="461" alt="image" src="https://github.com/user-attachments/assets/190a0a46-e553-49b4-8c2b-f2eff1673505" />
+
+<img width="706" height="447" alt="image" src="https://github.com/user-attachments/assets/190a0a46-e553-49b4-8c2b-f2eff1673505" />
 
 ## Live Demo
 
