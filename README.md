@@ -1,5 +1,5 @@
 
-##Novi - AI Personal Assistant
+## Novi - AI Personal Assistant
  What it does
 
 An agentic AI assistant that routes user queries to the appropriate specialist and uses tools to complete tasks.
