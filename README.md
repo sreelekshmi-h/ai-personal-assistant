@@ -1,7 +1,6 @@
-````markdown
-#Novi - AI Personal Assistant
 
-## What it does
+#Novi - AI Personal Assistant
+ What it does
 
 An agentic AI assistant that routes user queries to the appropriate specialist and uses tools to complete tasks.
 
@@ -95,5 +94,4 @@ ai-personal-assistant/
 | -------------- | ------------ |
 | `GROQ_API_KEY` | Groq API key |
 
-```
-```
+
