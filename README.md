@@ -9,7 +9,11 @@ An agentic AI assistant that routes user queries to the appropriate specialist a
 
 <img width="706" height="447" alt="image" src="https://github.com/user-attachments/assets/6b9033ee-4353-4fa0-924d-cb7541ab3243" />
 
-<img width="706" height="447" alt="image" src="https://github.com/user-attachments/assets/190a0a46-e553-49b4-8c2b-f2eff1673505" />
+<img width="620" height="418" alt="image" src="https://github.com/user-attachments/assets/e18fb0d4-f3df-4d84-994b-96a357c6104d" />
+
+
+<img width="617" height="442" alt="image" src="https://github.com/user-attachments/assets/fe201c96-0301-4765-babc-fca4e3be90be" />
+
 
 ## Live Demo
 
@@ -79,7 +83,6 @@ streamlit run app.py
 
 ```text
 ai-personal-assistant/
-├── screenshots/
 ├── main.py
 ├── app.py
 ├── agents.py
