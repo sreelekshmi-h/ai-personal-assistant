@@ -63,23 +63,8 @@ if user_input:
                 "error": True
             })
 
+
+
         except Exception as e:
             st.error(f"Error: {type(e).__name__}: {e}")
             st.exception(e)
-
-        """except Exception as e:
-            print(f"[ERROR] {e}")
-
-            error_message = (
-                "⚠️ Something went wrong while processing "
-                "your request."
-            )
-
-            st.warning(error_message)
-
-            st.session_state.messages.append({
-                "role": "assistant",
-                "content": error_message,
-                "error": True
-            })
-"""
