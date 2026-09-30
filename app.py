@@ -64,6 +64,10 @@ if user_input:
             })
 
         except Exception as e:
+            st.error(f"Error: {type(e).__name__}: {e}")
+            st.exception(e)
+
+        """except Exception as e:
             print(f"[ERROR] {e}")
 
             error_message = (
@@ -78,3 +82,4 @@ if user_input:
                 "content": error_message,
                 "error": True
             })
+"""
