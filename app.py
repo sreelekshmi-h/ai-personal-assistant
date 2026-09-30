@@ -1,7 +1,7 @@
 import streamlit as st
 from groq import RateLimitError
 from agents import handle_query
-import re
+
 
 st.set_page_config(
     page_title="Novi-AI Personal Assistant",
