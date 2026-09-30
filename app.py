@@ -27,28 +27,23 @@ for message in st.session_state.messages:
 user_input = st.chat_input("Ask me something...")
 
 if user_input:
+    st.chat_message("user").write(user_input)
 
-    # Show user message
-    with st.chat_message("user"):
-        st.write(user_input)
-
-    # Save user message
     st.session_state.messages.append({
         "role": "user",
         "content": user_input
     })
 
-    # Generate response
     with st.chat_message("assistant"):
-
         try:
             with st.spinner("Thinking..."):
-                answer = handle_query(user_input)
+                answer = handle_query(
+                    user_input,
+                    st.session_state.messages
+                )
 
-               # Remove citation markers such as 【1†L16-L24】 
-                answer = re.sub(r'【[^】]*】', '', answer)
-            st.write(answer)  
-            # Save normal response
+            st.write(answer)
+
             st.session_state.messages.append({
                 "role": "assistant",
                 "content": answer
@@ -62,7 +57,6 @@ if user_input:
 
             st.warning(error_message)
 
-            # Save error only after a query was submitted
             st.session_state.messages.append({
                 "role": "assistant",
                 "content": error_message,
@@ -74,7 +68,7 @@ if user_input:
 
             error_message = (
                 "⚠️ Something went wrong while processing "
-                "your request. Please try again."
+                "your request."
             )
 
             st.warning(error_message)

@@ -222,7 +222,7 @@ Do not mention internal agent routing.
 # GENERAL AGENT
 # -----------------------------
 
-def general_agent(user_query):
+def general_agent(user_query, conversation_history):
 
     messages = [
         {
@@ -242,12 +242,14 @@ For normal conversational questions, answer directly.
 
 Never handoff more than once.
 """
+    
         },
         {
             "role": "user",
             "content": user_query
         }
     ]
+    messages.extend(conversation_history)
    
     try:
         response = client.chat.completions.create(
@@ -324,7 +326,8 @@ def route_query(user_query):
 # MAIN HANDOFF FUNCTION
 # -----------------------------
 
-def handle_query(user_query):
+def handle_query(user_query, conversation_history):
+
     decision = route_query(user_query)
 
     if decision == "CALCULATION":
@@ -335,7 +338,10 @@ def handle_query(user_query):
         print(f"Context: {user_query}")
         print("[/HANDOFF]\n")
 
-        return calculation_specialist(user_query)
+        return calculation_specialist(
+            user_query,
+            conversation_history
+        )
 
     elif decision == "RESEARCH":
         print("\n[HANDOFF]")
@@ -345,8 +351,13 @@ def handle_query(user_query):
         print(f"Context: {user_query}")
         print("[/HANDOFF]\n")
 
-        return research_specialist(user_query)
+        return research_specialist(
+            user_query,
+            conversation_history
+        )
 
     else:
-        return general_agent(user_query)
-
+        return general_agent(
+            user_query,
+            conversation_history
+        )
