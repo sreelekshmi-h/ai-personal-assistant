@@ -86,7 +86,7 @@ web_search_tool = {
 # CALCULATION SPECIALIST
 # -----------------------------
 
-def calculation_specialist(user_query):
+def calculation_specialist(user_query, conversation_history):
     messages = [
         {
             "role": "system",
@@ -106,6 +106,7 @@ Return only the final answer.
             "content": user_query
         }
     ]
+    messages.extend(conversation_history)
     
     response = client.chat.completions.create(
         model=MODEL,
@@ -171,8 +172,7 @@ Return only the final answer.
 # -----------------------------
 # RESEARCH SPECIALIST
 # -----------------------------
-def research_specialist(user_query):
-
+def research_specialist(user_query, conversation_history):
     messages = [
         {
             "role": "system",
@@ -195,6 +195,7 @@ Do not mention internal agent routing.
             "content": user_query
         }
     ]
+    messages.extend(conversation_history)
     try:
         response = client.chat.completions.create(
             model=MODEL,
